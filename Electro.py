@@ -6,7 +6,7 @@ from matplotlib.dates import DateFormatter
 # Cargar el archivo CSV
 url = "./datos/datalogger.csv"
 df = pd.read_csv(url)
-
+##
 df.columns = ['Time', 'Voltage', 'ADC']
 
 df['Time'] = pd.to_datetime(df['Time'], format='%H:%M:%S')
@@ -32,4 +32,7 @@ def update(frame):
 
 ani = animation.FuncAnimation(fig, update, frames=len(df), init_func=init, blit=True, interval=200, repeat=False)
 
+
 plt.show()
+
+#Hacer interfaz con Tkinter
