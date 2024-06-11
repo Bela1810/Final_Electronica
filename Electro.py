@@ -30,7 +30,7 @@ def update(frame):
     line.set_data(x, y)
     return line,
 
-ani = animation.FuncAnimation(fig, update, frames=len(df), init_func=init, blit=True, interval=200, repeat=False)
+ani = animation.FuncAnimation(fig, update, frames=len(df), init_func=init, blit=True, interval=20, repeat=False)
 
 
 plt.show()
